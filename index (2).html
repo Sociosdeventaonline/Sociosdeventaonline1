@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Abarrotes Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #E60012;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      margin: 0;
+      font-size: 3rem;
+    }
+    nav {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .hero {
+      background: linear-gradient(to right, #E60012, #ff4f5a);
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .product {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product h3 {
+      color: #E60012;
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .product p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .product button {
+      background-color: #E60012;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+    .product button:hover {
+      background-color: #ff4f5a;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #E60012;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    function enviarPedido(producto) {
+      const telefono = '5219996102058'; // Reemplaza con tu número de WhatsApp
+      const mensaje = `Hola, quiero pedir el producto: ${producto}`;
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Tienda de Abarrotes Online</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#catalogo">Catálogo</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Del antojo al carrito! Encuentra tus botanas, pasteles y más aquí</h2>
+    <p>Compra lo que necesitas desde la comodidad de tu estación de trabajo.</p>
+  </section>
+
+  <section id="productos" class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Cacahuate Con QUESO" />
+      <h3>Cacahuate Con QUESO</h3>
+      <p>Los mejores de todo Macropay.</p>
+      <button onclick="enviarPedido('Cacahuate Con QUESO')">Comprar</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Pastel de Chocolate" />
+      <h3>Pastel de Chocolate</h3>
+      <p>Perfecto para Compartir.</p>
+      <button onclick="enviarPedido('Pastel de Chocolate')">Comprar</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="Gomidas picantes" />
+      <h3>Gomidas picantes</h3>
+      <p>Rico y delicioso.</p>
+      <button onclick="enviarPedido('Gomidas picantes')">Comprar</button>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>© 2025 Tienda de Abarrotes Online | contacto@abarrotesonline.com</p>
+  </footer>
+</body>
+</html>
